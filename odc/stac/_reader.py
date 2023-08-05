@@ -184,7 +184,7 @@ def rio_read(
 
     try:
         return _rio_read(src, cfg, dst_geobox, dst)
-    except rasterio.errors.RasterioIOError as e:
+    except rasterio.errors.RasterioError as e:
         if cfg.fail_on_error:
             log.error(
                 "Aborting load due to failure while reading: %s:%d",
